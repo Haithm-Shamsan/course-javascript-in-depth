@@ -15,3 +15,21 @@
 
     HINT: What is the base-case vs the "regular" cases here?
 */
+
+const fizzbuzz = (startNum, endNum) => {
+  if (startNum != endNum) {
+    if (startNum % 3 == 0) {
+      console.log("Fizz");
+    } else if (startNum % 5 == 0) {
+      console.log("Buzz");
+    } else if (startNum % 3 == 0 && startNum % 5 == 0) {
+      console.log("FizzBuzz");
+    } else {
+      console.log(startNum);
+    }
+
+    fizzbuzz(startNum + 1, endNum);
+  }
+};
+
+fizzbuzz(1, 20);

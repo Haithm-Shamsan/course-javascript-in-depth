@@ -3,7 +3,7 @@
        parameter called "sentence". The function will loop through
        "sentence" letter by letter, and for each letter it will
        yield a Promise that resolves after 100ms that:
-       - If the letter is a vowel (aeiou) then resolve with a "*"
+       - If the letter is a vowel () then resolve with a "*"
        - Otherwise resolve with the letter, but uppercased
 
     2. Create the generator object by calling the function ^
@@ -13,3 +13,31 @@
 
     *There are MANY ways to check if a string has any of several letters
 */
+const generatore = async function* (sentence = "sentence") {
+  for (const char of sentence) {
+    let IsVowel = /[aeiouAEIOU]/.test(char);
+
+    if (IsVowel) {
+      yield new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("*");
+        }, 100);
+      });
+    } else {
+      yield new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(char.toUpperCase());
+        }, 100);
+      });
+    }
+  }
+};
+
+const O = generatore("Monkeys are the coolest animal!");
+
+const CheckChar = async () => {
+  for await (const i of O) {
+    console.log(i);
+  }
+};
+CheckChar();

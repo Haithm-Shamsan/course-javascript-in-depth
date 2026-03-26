@@ -13,3 +13,19 @@
 
     4. How would you access and print out the symbols in "movie"?
 */
+const Movie = {
+  name: "Blade Runner",
+  director: "Ridley Scott",
+  year: 1982,
+  rating: 89,
+  genre: "Science Fiction",
+};
+
+Movie[Symbol("budget")] = 30;
+Movie[Symbol("budget")] = 41.6;
+
+for (const [key, pair] of Object.entries(Movie)) {
+  console.log(key + "         =>  " + pair);
+}
+
+console.log(Object.getOwnPropertySymbols(Movie));

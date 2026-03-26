@@ -12,3 +12,19 @@
 
     3. Also print out the total value of all items in the backpack
 */
+
+backpack = new Map();
+
+backpack.set(1, { name: "Sword", value: 300 });
+backpack.set(2, { name: "Monky", value: 35500 });
+backpack.set(3, { name: "Gold Nugger", value: 1000 });
+backpack.set(4, { name: "Pants", value: 100 });
+
+let TotalPrice = 0;
+for (const tool of backpack) {
+  id = tool[0];
+  itemitself = tool[1];
+  console.log(`${itemitself.name}:$${itemitself.value}`);
+  TotalPrice += itemitself.value;
+}
+console.log(TotalPrice);

@@ -24,3 +24,37 @@
        Eg: 5 Avocado
            10 Soup
 */
+function GenerateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+const getRandomNumber = function* (min, max) {
+  let i = 1;
+
+  while (i <= 5) {
+    yield GenerateRandomNumber(min, max);
+    i++;
+  }
+};
+
+const groceryList = function* () {
+  const groceries = ["Avocado", "Cookie", "Milk", "Soup", "Soda"];
+  const grolength = groceries.length;
+  let i = 0;
+
+  while (i < grolength) {
+    let randomitem = groceries.splice(
+      GenerateRandomNumber(0, groceries.length),
+      1
+    );
+
+    yield randomitem;
+    i++;
+  }
+};
+const RandomNumber = getRandomNumber(1, 10);
+const grocery = groceryList();
+for (let i = 0; i < 5; i++) {
+  const b = RandomNumber.next().value;
+  const a = grocery.next().value;
+  console.log(b + " " + a);
+}

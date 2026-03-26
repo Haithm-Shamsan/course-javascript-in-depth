@@ -17,3 +17,17 @@
     5. Print out each of the 2 values for the keys you just added.
        How does this differ from an Object?
 */
+
+const myConsole = new Map();
+
+myConsole.set("log", (message) => {
+  console.log(message);
+});
+
+myConsole.get("log")("How does this compare to Objects?");
+
+myConsole.set(1, "number 1");
+myConsole.set("1", "string 1");
+
+console.log(myConsole.get(1));
+console.log(myConsole.get("1"));

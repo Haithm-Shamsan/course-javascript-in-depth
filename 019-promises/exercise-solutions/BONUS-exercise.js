@@ -24,10 +24,9 @@ const promise2 = new Promise((resolve, reject) => {
   }, 5000);
 });
 
-Promise.all([promise1, promise2]).then((values) => {
-  const firstValue = values[0];
-  const secondValue = values[1];
-  console.log(values);
-  console.log(firstValue, secondValue);
-  console.log(firstValue + secondValue);
+Promise.all([promise1, promise2]).then((value) => {
+  console.log(value);
+  const v1 = value[0];
+  const v2 = value[1];
+  console.log(`Sum Of both promises${v1 + v2}`);
 });

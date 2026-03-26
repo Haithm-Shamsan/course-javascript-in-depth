@@ -10,7 +10,6 @@
 
     3. Add a new entry: colour -> "Black"
 
-    4. Change "breed" to be "Beagle"
 
     5. Remove "Data" from the list of friends for "myPet"
     
@@ -20,3 +19,20 @@
 
     8. Print out "myPet" to the terminal again
 */
+
+//  4. Change "breed" to be "Beagle"
+const myPet = new Map();
+
+myPet.set("name", "sudo");
+myPet.set("type", "dog");
+myPet.set("breed", "Poodle");
+myPet.set("age", 7);
+myPet.set("friends", ["Bit", "Byte", "Data"]);
+
+console.log(myPet);
+
+myPet.set("breed", "beagle");
+console.log(myPet);
+
+myPet.get("friends").push("Chip");
+console.log(myPet);

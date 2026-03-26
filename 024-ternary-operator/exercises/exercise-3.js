@@ -1,5 +1,5 @@
 /*
-    1. Create a variable called "characters" that points at the array:
+    1. Create a variable called "" that points at the array:
        ["Han Solo", "Spock", "Darth Vader", "Yoda", "Neo", "Sarah Connor"]
 
     2. Filter over "characters" to create a new array that does the following:
@@ -12,3 +12,15 @@
     BONUS: Can you shorten this with the short "arrow function
            expression" syntax?
 */
+const characters = [
+  "Han Solo",
+  "Spock",
+  "Darth Vader",
+  "Yoda",
+  "Neo",
+  "Sarah Connor",
+];
+
+const filter = characters.filter((x) => (x.includes(" ") ? true : false));
+
+console.log(filter);

@@ -9,3 +9,14 @@
 
     *This is quite challenging and is a common interview question
 */
+
+numbers = [10, 20, 15, 30, 15, 20, 35, 60, 10];
+
+seenNum = new Set();
+
+for (let i = 0; i <= numbers.length - 1; i++) {
+  if (seenNum.has(numbers[i])) {
+    return console.log(`Array Value ${numbers[i]} }`);
+  }
+  seenNum.add(numbers[i]);
+}

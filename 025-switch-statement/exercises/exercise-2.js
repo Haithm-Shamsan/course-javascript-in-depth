@@ -11,7 +11,41 @@
        a switch statement on the "class" property that has these cases:
        - 1: print out only "This is an easy fight"
        - 2: print out only "This will require some training"
-       - Otherwise only print out "Not implemented yet..."
+       - Otherwise only print out ""
 
     3. Run the code and make sure the correct messages get printed out
 */
+
+const enemies = {
+  rat: { atk: 3, def: 2, hp: 20, class: 1 },
+  goblin: { atk: 10, def: 6, hp: 50, class: 1 },
+  troll: { atk: 30, def: 20, hp: 200, class: 2 },
+  giant: { atk: 50, def: 40, hp: 500, class: 2 },
+};
+
+const GetEnemiesKey = (enemies) => {
+  return Object.keys(enemies);
+};
+
+const CatagoriesEnemies = (enemies) => {
+  const keys = GetEnemiesKey(enemies);
+
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    let enemy = enemies[key];
+
+    switch (enemy.class) {
+      case 1:
+        console.log("This is an easy fight");
+        break;
+      case 2:
+        console.log("This will require some training");
+        break; // You missed the break statement here
+      default:
+        console.log("Not implemented yet...");
+        break;
+    }
+  }
+};
+
+CatagoriesEnemies(enemies);

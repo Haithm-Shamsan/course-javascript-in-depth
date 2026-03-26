@@ -1,5 +1,4 @@
-/*
-    1. Create a new folder called "exercise3"
+/* 1. Create a new folder called "exercise3"
     2. Inside of "exercise3" create 3 files:
        - main.js
        - moduleA.js

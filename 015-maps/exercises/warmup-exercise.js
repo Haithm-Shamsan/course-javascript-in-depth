@@ -13,3 +13,22 @@
     
     5. Print out "mexico" to the terminal again
 */
+
+const MyMap = new Map();
+
+MyMap.set("id", 24);
+MyMap.set("name", "Mexico");
+MyMap.set("capital", "Mexico City");
+MyMap.set("neighbours", ["USA", "Guatemala", "Belize"]);
+
+console.log(MyMap);
+
+MyMap.set("id", 25);
+
+console.log(MyMap);
+
+let a = MyMap.get("neighbours");
+a.push("Honduras");
+
+MyMap.set("neighbours", a);
+console.log(MyMap);

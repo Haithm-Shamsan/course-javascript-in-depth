@@ -18,3 +18,11 @@
     5. Log out the prototype of cleo and taylor. What is
        happening? What about just taylor?
 */
+function Person(name) {
+  this.name = name;
+}
+
+const cleo = Person("Cleo");
+const taylor = new Person("Taylor");
+
+console.log(cleo.__proto__);

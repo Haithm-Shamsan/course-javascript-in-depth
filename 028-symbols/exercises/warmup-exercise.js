@@ -11,3 +11,9 @@
     4. Are the two symbols equivalent? (Equality check)
        Why or why not?
 */
+
+// Create symbols with descriptions
+const baboon = Symbol("Monkey");
+const gorilla = Symbol("Monkey");
+console.log(baboon);
+console.log(gorilla);

@@ -21,3 +21,25 @@
 
     *This is a challenging exercise - take it slow and step by step
 */
+const houseForSale = new Map();
+
+houseForSale.set("area", 940);
+houseForSale.set("value", 320000);
+houseForSale.set("streetName", "Fifth Street");
+houseForSale.set("built", 2012);
+houseForSale.set("owner", { name: "Blake", age: 29 });
+houseForSale.set("offers", [290000, 295000, 315000, 312000]);
+
+const MaxPrice = houseForSale
+  .get("offers")
+  .reduce((currentPrice, nextPrice) => {
+    return currentPrice >= nextPrice ? currentPrice : nextPrice;
+  }, 0);
+console.log(MaxPrice);
+
+console.log(houseForSale);
+houseForSale.delete("built");
+console.log(houseForSale);
+
+console.log((houseForSale.get("owner").age = 30));
+console.log(houseForSale);

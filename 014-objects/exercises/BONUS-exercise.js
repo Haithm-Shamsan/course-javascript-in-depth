@@ -14,3 +14,11 @@
 
     BONUS: How might the built-in "console" work?
 */
+
+MyConsole = {
+  log: (message = "") => {
+    console.log(message);
+  },
+};
+
+MyConsole.log("Hello World");

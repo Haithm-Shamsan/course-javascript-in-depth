@@ -16,3 +16,26 @@
 
     *Explain this behaviour
 */
+
+const o = [
+  [5, 10, 20],
+  [10, 20, 30],
+];
+
+const viewsCopy = [...o];
+
+console.log(o);
+console.log("00000000000000000000000");
+console.log(viewsCopy);
+
+viewsCopy[1].push(40);
+o[0].pop();
+console.log("00000000000000000000000");
+console.log(o);
+console.log("00000000000000000000000");
+console.log(viewsCopy);
+viewsCopy.push([100, 200]);
+console.log("00000000000000000000000");
+console.log(o);
+console.log("00000000000000000000000");
+console.log(viewsCopy);

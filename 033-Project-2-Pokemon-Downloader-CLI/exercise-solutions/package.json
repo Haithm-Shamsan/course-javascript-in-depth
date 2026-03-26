@@ -1,16 +1,16 @@
 {
-  "name": "code",
+  "name": "poki-dawnloader",
   "version": "1.0.0",
-  "description": "",
-  "main": "prompts.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "description": "",
   "dependencies": {
-    "inquirer": "^9.1.4",
-    "node-fetch": "^3.3.0"
-  }
+    "inquirer": "^10.0.1"
+  },
+  "type": "module"
 }

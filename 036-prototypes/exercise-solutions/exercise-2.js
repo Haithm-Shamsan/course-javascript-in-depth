@@ -13,10 +13,8 @@
 
 const fakeArray = { 0: "Zero", 1: "One", 2: "Two", length: 3 };
 
-// console.log(Object.getOwnPropertyNames(fakeArray.__proto__));
-
+// Correct the prototype assignment to make it an array-like object
 fakeArray.__proto__ = Array.prototype;
 
-// console.log(Object.getOwnPropertyNames(fakeArray.__proto__));
-
+// Now you can use array methods like map
 fakeArray.map((item) => console.log(item));

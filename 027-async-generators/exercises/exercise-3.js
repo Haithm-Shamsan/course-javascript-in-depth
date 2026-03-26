@@ -17,3 +17,24 @@
           - ^ If we logged "time" each loop we'd get:
           - 100, 200, 400, 800, 1600, 3200 ... etc
 */
+
+const generatore = async function* (time) {
+  while (true) {
+    yield new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(time);
+      }, time);
+    });
+    time *= 2;
+  }
+};
+
+const O = generatore(100);
+
+const hello = async () => {
+  for await (const iterator of O) {
+    console.log(iterator);
+  }
+};
+
+hello();

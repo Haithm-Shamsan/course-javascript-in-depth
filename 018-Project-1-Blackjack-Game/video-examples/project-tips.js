@@ -22,3 +22,17 @@
         // did dealer hit 21? - break - player loses
     }
 */
+
+while (true) {
+  if (PlayerScore > 21) {
+    console.log("Player Loset ");
+    break;
+  } else if (PlayerScore === 21) {
+    console.log("Player Won");
+  } else if (DealerScore > 21) {
+    console.log("Dealer Loset ");
+    break;
+  } else if (DealerScore === 21) {
+    console.log("Dealer Won");
+  }
+}

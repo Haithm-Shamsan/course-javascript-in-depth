@@ -1,5 +1,5 @@
 /*
-    1. Create an array called "numbers" with the following values:
+    1. Create an array called "" with the following values:
        [10, 20, 15, 30, 15, 20, 35, 60, 10]
 
     2. Find the first duplicate value in "numbers" and print
@@ -16,3 +16,13 @@
 
     *This is very challenging and is a common interview question
 */
+
+const mySet = new Set();
+
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add(2);
+mySet.add(2);
+mySet.add(4);
+console.log(mySet);

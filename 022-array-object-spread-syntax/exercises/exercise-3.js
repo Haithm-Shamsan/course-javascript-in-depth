@@ -16,3 +16,21 @@
 
     *This can be done MANY different ways but is also quite challenging!
 */
+
+const superhero = {
+  name: "Bruce Wayne",
+  alias: "Batman",
+  universe: "DC",
+  happy: false,
+  enemies: ["Joker", "Catwoman", "Bane"],
+  bestMovie: { title: "The Dark Knight", rating: 95 },
+};
+
+const copyhero = {
+  ...superhero,
+  enemies: [...superhero.enemies, "Poison Ivy"],
+  bestMovie: { ...superhero.bestMovie, year: 2006 },
+};
+
+console.log(copyhero);
+console.log(superhero);

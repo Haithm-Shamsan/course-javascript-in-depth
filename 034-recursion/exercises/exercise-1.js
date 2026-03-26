@@ -18,3 +18,17 @@
 
     HINT: What are the base-cases? (I thought of 4)
 */
+
+const palindrome = (hello = "") => {
+  if (hello <= 1) {
+    return true;
+  }
+
+  if (hello[0] !== hello[hello.length - 1]) {
+    return false;
+  }
+
+  return palindrome(hello.slice(1, hello.length - 1));
+};
+
+console.log(palindrome("msom"));

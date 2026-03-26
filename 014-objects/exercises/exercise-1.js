@@ -20,3 +20,23 @@
 
     8. Print out "myPet" to the terminal again
 */
+
+let myPet = {
+  name: "Sudo",
+  type: "Dog",
+  breed: "Poodle",
+  age: 7,
+  friends: ["Bit", "Byte", "Data"],
+};
+
+console.log(myPet);
+
+myPet.color = "black";
+
+myPet.breed = "beagle";
+
+delete myPet.friends.pop(["Data"]);
+console.log(myPet);
+
+myPet.friends.push("Chip");
+console.log(myPet);

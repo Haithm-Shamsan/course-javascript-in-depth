@@ -7,3 +7,17 @@
 
     HINT: Use setTimeout for the delay
 */
+
+console.log("Program Started");
+
+prom = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Program Completed");
+  }, 3000);
+});
+
+console.log(prom);
+console.log("Program In Prograss.....");
+prom.then((programmessage) => {
+  console.log(programmessage);
+});

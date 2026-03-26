@@ -17,3 +17,24 @@
     * This is purposefully challenging and will require lots of
       Googling to see how to parse the image and save it using Node.
 */
+
+const url = "https://w.wallhaven.cc/full/ex/wallhaven-exl88k.png";
+
+const dawnloadImage = async (url, destination) => {
+  try {
+    const respnes = await fetch(url);
+    respnes.then((resulte) => resulte);
+
+    const buffer = await resulte.buffer();
+    await FileSystem.promises.writeFile(buffer);
+
+    console.log("image dawnloaded seccussfully !");
+  } catch {
+    console.log("image dawnload failed");
+  }
+};
+
+const destination =
+  'D:VSCodeProjectsjavascript-in-depth"032-fetch-apiexercises\fetch-api';
+
+dawnloadImage(url, destination);

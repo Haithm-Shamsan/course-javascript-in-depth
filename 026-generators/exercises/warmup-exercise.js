@@ -6,3 +6,18 @@
        function and iterate through the generator using a
        for...of loop.
 */
+
+const counter = function* () {
+  let i = 0;
+
+  while (i <= 10) {
+    yield i;
+    i++;
+  }
+};
+
+const ourcounter = counter();
+
+for (const i of ourcounter) {
+  console.log(i);
+}

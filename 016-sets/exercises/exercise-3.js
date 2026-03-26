@@ -22,3 +22,20 @@
 
     HINT: Use to the Set to keep track of duplicates
 */
+const items = [
+  { name: "banana", quantity: 1, price: 1.95 },
+  { name: "apple", quantity: 1, price: 1.45 },
+  { name: "banana", quantity: 10, price: 0.05 },
+  { name: "candy", quantity: 1, price: 3.5 },
+];
+const resultes = [];
+const dublicates = new Set();
+
+for (let i = 0; i < items.length; i++) {
+  if (dublicates.has(items[i].name)) {
+    continue;
+  }
+  dublicates.add(items[i].name);
+  resultes.push(items[i]);
+}
+console.log(resultes);

@@ -13,3 +13,10 @@
     BONUS: Can you shorten this with the short "arrow function
            expression" syntax?
 */
+const wizards = ["Gandalf", "Voldemort", "Harry", "Jafar", "Saruman", "Merlin"];
+
+const IsContainN = wizards.map((name) => {
+  return name.includes("n") ? name.replace("n", "*") : name.toUpperCase();
+});
+
+console.log(IsContainN);

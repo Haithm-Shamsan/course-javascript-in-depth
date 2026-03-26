@@ -15,3 +15,18 @@
 
     4. Print out "capsNames"
 */
+
+const names = new Set();
+
+const capsNames = new Set();
+
+names.add("Haythm");
+names.add("Ammar");
+names.add("Ahmed");
+names.add("Shamsan");
+
+for (const name of names) {
+  capsNames.add(name.toUpperCase());
+}
+
+console.log(capsNames);

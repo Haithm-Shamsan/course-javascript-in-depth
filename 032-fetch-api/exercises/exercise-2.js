@@ -5,7 +5,7 @@
     2. Have a read through pokeapi.co
 
     2. Make a request to:
-       https://pokeapi.co/api/v2/pokemon/pikachu
+      https://pokeapi.co/api/v2/pokemon/pikachu
        and print out pikachu's "official-artwork"'s URL for
        their image (png). Visit this URL to make sure it works
        using your Browser.
@@ -13,3 +13,12 @@
     HINT: Be careful with the naming of the keys here when trying
           to access the parsed JSON
 */
+const url = " https://pokeapi.co/api/v2/pokemon/pikachu";
+
+fetch(url)
+  .then((respned) => {
+    return resulte.json();
+  })
+  .then((resulte) => {
+    console.log(resulte);
+  });
